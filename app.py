@@ -10,7 +10,13 @@ import matplotlib.pyplot as plt
 st.set_page_config(page_title="Qiskit Quantum Playground", layout="wide")
 st.title("⚛️ Qiskit Quantum Playground")
 
-# --- NEW: Educational Reference Section ---
+# --- NEW: Developer Profile Header ---
+st.markdown("""
+👨‍💻 **Developed by: Shiva Krishna Nallabothu** *Assistant Professor | M.Tech (Ph.D) in Computer Science | **KLH (Deemed to be University)***
+""")
+st.write("") # Adds a tiny bit of breathing room
+
+# --- Educational Reference Section ---
 with st.expander("📚 Beginner's Guide to Quantum Computing (Click to expand)"):
     st.markdown("""
     ### 1. What is a Qubit?
@@ -28,13 +34,13 @@ with st.expander("📚 Beginner's Guide to Quantum Computing (Click to expand)")
 
     ### 4. Essential Quantum Gates
     Gates are operations we apply to qubits to change their state.
-    * **X (NOT):** Flips a qubit from `|0⟩` to `|1⟩`, and vice versa. (Like a classical NOT gate).
+    * **X (NOT):** Flips a qubit from `|0⟩` to `|1⟩`, and vice versa. 
     * **H (Hadamard):** The magic gate! It puts a definitive `|0⟩` or `|1⟩` qubit into a state of perfect Superposition.
     * **Z and Y:** These are "Phase Gates". They rotate the qubit's state around the Z or Y axes of the Bloch Sphere without changing its measurement probability.
     * **CNOT (Controlled-NOT):** A multi-qubit gate. It flips the `Target` qubit ONLY if the `Control` qubit is `|1⟩`. This is the primary gate used to create Entanglement.
 
     ### 5. Entanglement (The Spooky Stuff)
-    Entanglement links two or more qubits together. Once entangled, the state of one qubit instantly provides information about the state of the other, regardless of how far apart they are. The **Bell State** and **GHZ State** are famous examples of entanglement.
+    Entanglement links two or more qubits together. Once entangled, the state of one qubit instantly provides information about the state of the other, regardless of how far apart they are. 
     """)
 
 # --- Initialize Session State (Memory) ---
@@ -97,10 +103,9 @@ else:
         if st.sidebar.button(f"➕ Add {gate_choice.split()[0]}"):
             st.session_state.gates.append((gate_choice.split()[0], tgt))
 
-    # --- NEW: Gate History Visualizer ---
+    # Gate History Visualizer
     if st.session_state.gates:
         st.sidebar.markdown("**Current Gate Sequence:**")
-        # Format the list of gates into a readable sequence string
         seq_str = " ➔ ".join([f"{g[0]}({g[1]})" if len(g)==2 else f"{g[0]}({g[1]},{g[2]})" for g in st.session_state.gates])
         st.sidebar.info(seq_str)
 
