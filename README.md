@@ -25,7 +25,7 @@ If you want to run this playground on your own machine, follow these steps:
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/shivakrishnan/quantum-playground.git](https://github.com/shivakrishnan/quantum-playground.git)
+   git clone [https://github.com/shivakrishnan/quantum-playground.git]
    cd quantum-playground
 
 2. **Create a virtual environment (Python 3.10+ recommended):**
