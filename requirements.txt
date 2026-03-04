@@ -1,6 +1,8 @@
-streamlit
 qiskit
 qiskit-aer
+streamlit
 pandas
 matplotlib
+numpy
+seaborn
 pylatexenc
