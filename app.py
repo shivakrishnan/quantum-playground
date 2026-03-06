@@ -51,7 +51,7 @@ def render_home():
     # -----------------------------------------
     # Replace 'banner.png' with the actual name of your image file.
     # use_container_width=True ensures it perfectly fits the width of the app.
-    st.image("banner.jpg", use_container_width=True)
+    st.image("banner.png", use_container_width=True)
     
     # -----------------------------------------
     # 2. YOUR DETAILS & GITHUB LINK
