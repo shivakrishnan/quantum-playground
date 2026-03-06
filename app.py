@@ -28,6 +28,8 @@ def navigate_to(page_name):
 st.title("⚛️ Qiskit Quantum Playground")
 st.markdown("👨‍💻 Developed by: Shiva Krishna Nallabothu | M.Tech (Ph.D) in Computer Science | Assistant Professor, KLH (Deemed to be University)|")
 st.write("") 
+st.markdown(""" **GitHub Repository:** [Click here to view the source code](https://github.com/shivakrishnan/quantum-playground)    """)
+st.write("") 
 
 # --- GENERAL ADDITION: Glossary Sidebar ---
 def render_glossary():
@@ -44,9 +46,29 @@ def render_glossary():
 # PAGE VIEW: HOME 
 # ==========================================
 def render_home():
-    st.header("Embark on Your Quantum Journey")
-    st.write("Select a level below to begin exploring the mechanics of quantum computing.")
-    st.write("")
+    # -----------------------------------------
+    # 1. THE TOP BANNER IMAGE
+    # -----------------------------------------
+    # Replace 'banner.png' with the actual name of your image file.
+    # use_container_width=True ensures it perfectly fits the width of the app.
+    st.image("banner.jpg", use_container_width=True)
+    
+    # -----------------------------------------
+    # 2. YOUR DETAILS & GITHUB LINK
+    # -----------------------------------------
+    # Use Markdown to create a clickable link to your GitHub profile or repository.   
+    # Adds a subtle horizontal line to separate your header from the main content
+    st.divider() 
+
+    # -----------------------------------------
+    # 3. ACTUAL CONTENT OF THE HOMEPAGE
+    # -----------------------------------------
+    st.title("🌌 Welcome to the Quantum Playground")
+    st.write("An interactive platform to explore the math, algorithms, hardware, and applications of Quantum Computing.")
+    
+    #st.header("Embark on Your Quantum Journey")
+    #st.write("Select a level below to begin exploring the mechanics of quantum computing.")
+   # st.write("")
     
     col1, col2 = st.columns(2)
     with col1:
